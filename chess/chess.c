@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 #define BLK_KNIGHT 'N'
 #define BLK_PAWN 'P'
 #define BLK_BISHOP 'B'
@@ -12,8 +14,16 @@
 #define WHT_KING 'k'
 
 static char board[8][8];
+static int x_sel = -1;
+static int y_sel = -1;
 
-void init() {
+bool xy_valid(int x, int y)
+{
+    return (!x < 0 && !y < 0 && x < 8 && y < 8);
+}
+
+void init()
+{
     board[0][0] = BLK_ROOK;
     board[0][1] = BLK_KNIGHT;
     board[0][2] = BLK_BISHOP;
