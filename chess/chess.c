@@ -28,19 +28,17 @@ bool select(int x, int y)
 {
     if (xy_valid(x, y))
     {
-        x_sel = x;
-        y_sel = y;
+        if (x == x_sel && y == y_sel)
+            deselect();
+        else
+        {
+            x_sel = x;
+            y_sel = y;
+        }
         return true;
     }
     else
-    {
-        if (x == x_sel && y == y_sel)
-        {
-            deselect();
-            return true;
-        }
         return false;
-    }
 }
 
 void init()
