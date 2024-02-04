@@ -22,6 +22,27 @@ bool xy_valid(int x, int y)
     return (!x < 0 && !y < 0 && x < 8 && y < 8);
 }
 
+void deselect() { x_sel = -1, y_sel = -1; }
+
+bool select(int x, int y)
+{
+    if (xy_valid(x, y))
+    {
+        x_sel = x;
+        y_sel = y;
+        return true;
+    }
+    else
+    {
+        if (x == x_sel && y == y_sel)
+        {
+            deselect();
+            return true;
+        }
+        return false;
+    }
+}
+
 void init()
 {
     board[0][0] = BLK_ROOK;
