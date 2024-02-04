@@ -42,6 +42,10 @@ bool select(int x, int y)
         return false;
 }
 
+// blk/wht pawns have opposite y directions
+// rooks, bishops, kings, queens, knights OK
+// somehow encapsulate pawn's diff behavior
+
 /*bool move(int x, int y)
 {
     if (!xy_valid(x_sel, y_sel))
