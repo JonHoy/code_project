@@ -66,6 +66,7 @@ bool select(int x, int y)
 
 void init()
 {
+    // NOTE: CONCEPT vs. INIT OF X, Y DIFF
     board[0][0] = BLK_ROOK;
     board[0][1] = BLK_KNIGHT;
     board[0][2] = BLK_BISHOP;
