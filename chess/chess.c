@@ -1,4 +1,5 @@
 #include <stdbool.h>
+//#include <ctype.h>
 
 #define BLK_KNIGHT 'N'
 #define BLK_PAWN 'P'
@@ -40,6 +41,24 @@ bool select(int x, int y)
     else
         return false;
 }
+
+/*bool move(int x, int y)
+{
+    if (!xy_valid(x_sel, y_sel))
+        return false;
+    char c = tolower(board[x_sel][y_sel]);
+    switch (c)
+    {
+    case 'p':
+        // code
+        break;
+    // more cases
+    default:
+        break;
+    }
+}*/
+
+// bool capture(int x, int y)
 
 void init()
 {
